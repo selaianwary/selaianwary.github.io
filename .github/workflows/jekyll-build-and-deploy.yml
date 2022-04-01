@@ -1,0 +1,36 @@
+name: Build and deploy Jekyll site to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  publish-to-medium:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set crosspost_to_medium in all .markdown to true
+      run: |
+        sed -i 's/crosspost_to_medium: $IS_CROSSPOST/crosspost_to_medium: true/g' _posts/*.markdown
+    - uses: stefanzweifel/git-auto-commit-action@v4
+      with:
+        commit_message: Apply IS_CROSSPOST to True
+        
+  github-pages:
+    needs: [publish-to-medium]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/cache@v2
+        with:
+          path: vendor/bundle
+          key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile') }}
+          restore-keys: |
+            ${{ runner.os }}-gems-
+      - uses: helaili/jekyll-action@v2 # this handles the build and deploy
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+        env:
+          MEDIUM_INTEGRATION_TOKEN: ${{ secrets.MEDIUM_INTEGRATION_TOKEN }}
+          MEDIUM_USER_ID: ${{ secrets.MEDIUM_USER_ID }}
