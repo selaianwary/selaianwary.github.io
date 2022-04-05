@@ -81,7 +81,7 @@ After running this command all the necessary starter files and *_posts* director
 
 As you can see in the image above, VS Code offers a preview mode for Markdown editing. By default, Markdown previews automatically update to show the currently active *.markdown* file.
 
-If you're using **zsh**, it might be that you still need to adjust your gem path - if this error occurs: `zsh: command not found: jekyll`. Try and add the following and replace the `X.X` with the first two numbers of the Ruby version you're using:
+If you're using **zsh**, it might be that you still need to adjust your gem path - if this error occurs: `zsh: command not found: jekyll`. Try to add the following and replace the `X.X` with the first two numbers of the Ruby version you're using:
 ```sh
 export PATH="$HOME/.gem/ruby/X.X.0/bin:$PATH"
 ```
@@ -91,7 +91,7 @@ And then reinstall Bundler and Jekyll with:
 gem install --user-install bundler jekyll
 ```
 
-> ***N.B.** If you're using different version of Ruby there is a tool called **rbenv** which allows you to install and run different versions of Ruby side-by-side. This is also explained in the Jekyll documentation. So, this and your environment variables could be something to look out for while you're troubleshooting.*
+> ***N.B.** If you're using different versions of Ruby there is a tool called **rbenv** which allows you to install and run different versions of Ruby side-by-side. This is also explained in the Jekyll documentation. So, this and your environment variables could be something to look out for while you're troubleshooting.*
 
 ### 4. Configuring your Site
 Open the *Gemfile* that Jekyll created in VS Code and follow the steps below for a basic configuration:
@@ -224,4 +224,4 @@ As shown in the code block above, an extra job replaces the placeholder value in
 > ***N.B.** You can just set the front matter variable to `crosspost_to_medium: true` and then serve your Jekyll site - so that it will publish your posts to Medium at once. But, making it part of the workflow process will give you more control over when to publish to Medium. You can for example also choose to publish when you create a release.* 
 
 ## Conclusion
-That's it! You're all set. Meaning, after a pull request gets merged in your GitHub repository - that holds your Jekyll site, a crosspost to Medium will be triggered by the actions that were added to the GutHub workflow. This post was created using this setup, you can find the source code [here](https://github.com/selaianwary/selaianwary.github.io). I look forward to your feedback! 
+That's it! You're all set. Meaning, after a pull request gets merged in your GitHub repository - that holds your Jekyll site, a crosspost to Medium will be triggered by the actions that were added to the GitHub workflow. This post was created using this setup, you can find the source code [here](https://github.com/selaianwary/selaianwary.github.io). I look forward to your feedback! 
