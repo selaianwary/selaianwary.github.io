@@ -3,7 +3,7 @@ layout: post
 title:  "How to Publish Markdowns to Medium"
 date:   2022-04-04 14:00:00 +0100
 categories: guide medium
-crosspost_to_medium: $IS_CROSSPOST
+crosspost_to_medium: true
 ---
 
 # Guide - Using Plain Text, Git and Automation to Publish Medium Stories
@@ -176,7 +176,7 @@ layout: post
 title:  "Welcome to Jekyll!"
 date:   2022-03-19 21:49:12 +0100
 categories: jekyll update
-crosspost_to_medium: $IS_CROSSPOST
+crosspost_to_medium: true
 ---
 ```
 
@@ -196,7 +196,7 @@ jobs:
       - uses: actions/checkout@v2
       - name: Set crosspost_to_medium in all .markdown to true
         run: |
-          sed -i 's/crosspost_to_medium: $IS_CROSSPOST/crosspost_to_medium: true/g' _posts/*.markdown
+          sed -i 's/crosspost_to_medium: true/crosspost_to_medium: true/g' _posts/*.markdown
       - uses: stefanzweifel/git-auto-commit-action@v4
         with:
           commit_message: Apply IS_CROSSPOST to True
