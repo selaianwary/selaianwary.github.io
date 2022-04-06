@@ -169,14 +169,14 @@ Make sure you add the environment variables from the crosspost guide to your loc
 ![env-vars](/assets/images/repo-vars.png)
 
 ### 7. Publishing to Medium
-Now we can add the `$IS_CROSSPOST` value to `crosspost_to_medium` in the front matter of our post so that we can crosspost to Medium: 
+Now we can add the `$PLACEHOLDER` value to `crosspost_to_medium` in the front matter of our post so that we can crosspost to Medium: 
 ```
 ---
 layout: post
 title:  "Welcome to Jekyll!"
 date:   2022-03-19 21:49:12 +0100
 categories: jekyll update
-crosspost_to_medium: true
+crosspost_to_medium: $PLACEHOLDER
 ---
 ```
 
@@ -196,7 +196,7 @@ jobs:
       - uses: actions/checkout@v2
       - name: Set crosspost_to_medium in all .markdown to true
         run: |
-          sed -i 's/crosspost_to_medium: true/crosspost_to_medium: true/g' _posts/*.markdown
+          sed -i 's/crosspost_to_medium: $PLACEHOLDER/crosspost_to_medium: true/g' _posts/*.markdown
       - uses: stefanzweifel/git-auto-commit-action@v4
         with:
           commit_message: Apply IS_CROSSPOST to True
