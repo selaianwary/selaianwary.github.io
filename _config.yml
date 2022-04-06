@@ -37,7 +37,9 @@ theme: minima
 plugins:
   - jekyll-feed
 
-  
+# For documentation look here: https://github.com/aarongustafson/jekyll-crosspost-to-medium
+jekyll-crosspost_to_medium:
+  cache: .jekyll-crosspost_to_medium
 
 # Exclude from processing.
 # The following items will not be processed, by default.
