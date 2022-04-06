@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>How to Publish Markdowns to Medium | Full-Stack Java Development</title>
+<meta name="generator" content="Jekyll v3.9.0" />
+<meta property="og:title" content="How to Publish Markdowns to Medium" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Guide - Using Plain Text, Git and Automation to Publish Medium Stories Dear reader, welcome to my first guide. Recently I started looking for a new way of learning. That’s how I ended up at Medium, but now as a writer. In the past I have often used the platform as a reference book for learning. I’ve decided to take it to another level and challenge myself as a writer, as I hope to contribute to the community by writing and to also learn more about the topics covered." />
+<meta property="og:description" content="Guide - Using Plain Text, Git and Automation to Publish Medium Stories Dear reader, welcome to my first guide. Recently I started looking for a new way of learning. That’s how I ended up at Medium, but now as a writer. In the past I have often used the platform as a reference book for learning. I’ve decided to take it to another level and challenge myself as a writer, as I hope to contribute to the community by writing and to also learn more about the topics covered." />
+<link rel="canonical" href="https://selaianwary.github.io/guide/medium/2022/04/04/publish-markdowns-to-medium.html" />
+<meta property="og:url" content="https://selaianwary.github.io/guide/medium/2022/04/04/publish-markdowns-to-medium.html" />
+<meta property="og:site_name" content="Full-Stack Java Development" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2022-04-04T13:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="How to Publish Markdowns to Medium" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2022-04-04T13:00:00+00:00","datePublished":"2022-04-04T13:00:00+00:00","description":"Guide - Using Plain Text, Git and Automation to Publish Medium Stories Dear reader, welcome to my first guide. Recently I started looking for a new way of learning. That’s how I ended up at Medium, but now as a writer. In the past I have often used the platform as a reference book for learning. I’ve decided to take it to another level and challenge myself as a writer, as I hope to contribute to the community by writing and to also learn more about the topics covered.","headline":"How to Publish Markdowns to Medium","mainEntityOfPage":{"@type":"WebPage","@id":"https://selaianwary.github.io/guide/medium/2022/04/04/publish-markdowns-to-medium.html"},"url":"https://selaianwary.github.io/guide/medium/2022/04/04/publish-markdowns-to-medium.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="https://selaianwary.github.io/feed.xml" title="Full-Stack Java Development" /></head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/">Full-Stack Java Development</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/about/">About</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">How to Publish Markdowns to Medium</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2022-04-04T13:00:00+00:00" itemprop="datePublished">Apr 4, 2022
+      </time></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <h1 id="guide---using-plain-text-git-and-automation-to-publish-medium-stories">Guide - Using Plain Text, Git and Automation to Publish Medium Stories</h1>
+<p>Dear reader, welcome to my first guide. Recently I started looking for a new way of learning. That’s how I ended up at Medium, but now as a writer. In the past I have often used the platform as a reference book for learning. I’ve decided to take it to another level and challenge myself as a writer, as I hope to contribute to the community by writing and to also learn more about the topics covered.</p>
+
+<p>At least I can say that I am a fan. Unfortunately, Medium doesn’t offer any options to write in Markdown, let alone automate publishing from a Git repository. So in this guide I will explain what I think is the best option for publishing plaintext Markdown as stories to Medium and guide you through it.</p>
+
+<h2 id="why-do-i-want-this">Why Do I Want This?</h2>
+<p>My inspiration for this is an extension of the documentation as code (docs-as-code) approach, which refers to the idea that you should be writing documentation with the same tools as code - if you are a developer who is writing technical documentation.</p>
+
+<p><strong>Markdown</strong> is a lightweight markup language that you can use to add formatting elements to plaintext documents. It gets rid of all distractions of formatting that traditional text editors have (<em>e.g.</em> Microsoft Word). It allows you to format your writing without taking your fingers off the keyboard. As such, your writing experience becomes seamless without losing focus on what’s important (<em>i.e.</em> content). And a big plus; since it’s plaintext it’s also platform independent.</p>
+
+<p><strong>Git</strong> is a version control system that is used by developers all over the world. It will help to track different versions of Markdowns, and to review texts with diffs and comments and collaborate with other writers. And, most of the technical documentation that can be found on <a href="https://medium.com/r/?url=https%3A%2F%2Fgithub.com">GitHub</a> is already written in Markdown – there are plenty of examples.</p>
+
+<p><strong>Automation</strong> is important, because writing in Markdown alone and using some copy paste solution will not suffice. We need a way of importing Markdown texts into Medium stories as seamless as writing the Markdowns and pushing them to a Git repository. Therefore, publishing a story to Medium should be a part of this process. Because a good developer is a lazy developer! That is, most developers hate doing repetitive tasks and one way to avoid this is by introducing automation.</p>
+
+<h3 id="the-general-idea">The General Idea</h3>
+<p>We will be using <a href="https://pages.github.com">GitHub Pages</a> with <a href="https://jekyllrb.com">Jekyll</a> in this guide. This allows us to transform plain text into static websites and blogs. GitHub Pages is powered by Jekyll, so we can easily deploy our site using GitHub for free - we can even use a <a href="https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/about-custom-domains-and-github-pages">custom domain name</a>. As for automation, we will use the <a href="https://github.com/aarongustafson/jekyll-crosspost-to-medium">jekyll-crosspost-to-medium</a> plugin to automatically syndicate our posts to Medium from our Jekyll blog. We will combine this with <a href="https://docs.github.com/en/actions">GitHub Actions</a> to automate the process after a merge to the main branch for the GitHub Page.</p>
+
+<p><img src="/assets/images/general_idea.png" alt="general_idea" /></p>
+
+<p>So the general idea is to write stories in Visual Studio Code, push changes to the GitHub repository and trigger a publish on GitHub Pages and Medium - preferably after a merge.</p>
+
+<h2 id="prerequisites">Prerequisites</h2>
+<ol>
+  <li>You’re familiar with version control systems such as Git, or <a href="https://git-scm.com">start learning</a>.</li>
+  <li>You’ve created an account on GitHub, or <a href="https://github.com">sign up</a>.</li>
+  <li>You know how to write in Markdown, or <a href="https://www.markdownguide.org/getting-started/">start learning</a>.</li>
+  <li>You’ve installed a text editor, or download <a href="https://code.visualstudio.com">Visual Studio Code</a>.</li>
+</ol>
+
+<h2 id="lets-get-started">Let’s Get Started!</h2>
+
+<h3 id="1-setup-github-pages">1. Setup GitHub Pages</h3>
+<p>This step is pretty easy and can be achieved by following the basic guide that <a href="https://pages.github.com">GitHub Pages</a> offers. Just read everything carefully and do not deviate from the steps they explain in the guide. If you’ve done so successfully then the end result will be a skeleton website with an <em>index.html</em> that shows “Hello World” on your personal page: <strong>https://username.github.io</strong>.  We can ignore this <em>index.html</em> file for now, because we will be writing in Markdown and not HTML. 
+Open up a terminal (or command line) on your local machine and clone in your git repository and replace USERNAME with your own:</p>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git clone https://github.com/USERNAME/USERNAME.github.io.git
+</code></pre></div></div>
+
+<p>Open the newly created folder with:</p>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cd </span>USERNAME.github.io
+</code></pre></div></div>
+
+<p>If you choose to publish your site from the <code class="language-plaintext highlighter-rouge">gh-pages</code> branch, create and checkout the <code class="language-plaintext highlighter-rouge">gh-pages</code> branch with:</p>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git checkout - orphan gh-pages
+</code></pre></div></div>
+
+<p>You could decide to use another source, you can read more about that <a href="https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site">here</a>. Inside the current directory you’ll see the <em>index.html</em>, delete this with:</p>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">rm</span> <span class="nt">-rf</span> index.html
+</code></pre></div></div>
+
+<p>Now we’re ready to setup Jekyll - but, leave the terminal open with the current directory.</p>
+
+<blockquote>
+  <p><em><strong>N.B.</strong> You can skip the <a href="https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll">Blogging with Jekyll</a> guide that GitHub Pages offers, since we will be using the (superior) installation guide that Jekyll offers in <strong>2. Jekyll Installation</strong> instead. But, feel free to use the GitHub Pages guide as a reference if needed, of course!</em></p>
+</blockquote>
+
+<h3 id="2-jekyll-installation">2. Jekyll Installation</h3>
+<p>Jekyll converts Markdown to HTML using the Markdown filter specified in a config file. You can read about the order of interpretation <a href="https://jekyllrb.com/tutorials/orderofinterpretation/">here</a>. This step is a bit more tricky. But, Jekyll offers an in-depth <a href="https://jekyllrb.com/docs/">setup guide</a> for each OS. So if you follow the guide correctly, then on MacOS you’ll end up installing:</p>
+<ol>
+  <li><strong>Ruby</strong>, the programming language that is used to power Jekyll.</li>
+  <li><strong>Bundler</strong>, the Ruby gem which is used to manage the application’s gems for your project - somewhat similar to NPM; it uses files called <code class="language-plaintext highlighter-rouge">Gemfile</code> and <code class="language-plaintext highlighter-rouge">Gemfile.lock</code>.</li>
+  <li><strong>Jekyll</strong>, the static site generator.</li>
+</ol>
+
+<p>Before you proceed with the next step, make sure that your environment settings are configured correctly by running <code class="language-plaintext highlighter-rouge">gem env</code> in your terminal.</p>
+
+<h3 id="3-setup-a-jekyll-site">3. Setup a Jekyll Site</h3>
+<p>Now we’re ready to setup a Jekyll site. That can be achieved easily by running the following command in the terminal inside the <em>username.github.io</em> directory:</p>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>jekyll new <span class="nt">--skip-bundle</span> <span class="nb">.</span>
+</code></pre></div></div>
+
+<p>After running this command all the necessary starter files and <em>_posts</em> directory will be generated for you. Now, fire up <strong>Visual Studio Code (VS Code)</strong> and import your <em>username.github.io</em> folder. You’ll see the following directory structure in your explorer:
+<img src="/assets/images/vscode.png" alt="vscode" /></p>
+
+<p>As you can see in the image above, VS Code offers a preview mode for Markdown editing. By default, Markdown previews automatically update to show the currently active <em>.markdown</em> file.</p>
+
+<p>If you’re using <strong>zsh</strong>, it might be that you still need to adjust your gem path - if this error occurs: <code class="language-plaintext highlighter-rouge">zsh: command not found: jekyll</code>. Try to add the following and replace the <code class="language-plaintext highlighter-rouge">X.X</code> with the first two numbers of the Ruby version you’re using:</p>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">export </span><span class="nv">PATH</span><span class="o">=</span><span class="s2">"</span><span class="nv">$HOME</span><span class="s2">/.gem/ruby/X.X.0/bin:</span><span class="nv">$PATH</span><span class="s2">"</span>
+</code></pre></div></div>
+
+<p>And then reinstall Bundler and Jekyll with:</p>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gem <span class="nb">install</span> <span class="nt">--user-install</span> bundler jekyll
+</code></pre></div></div>
+
+<blockquote>
+  <p><em><strong>N.B.</strong> If you’re using different versions of Ruby there is a tool called <strong>rbenv</strong> which allows you to install and run different versions of Ruby side-by-side. This is also explained in the Jekyll documentation. So, this and your environment variables could be something to look out for while you’re troubleshooting.</em></p>
+</blockquote>
+
+<h3 id="4-configuring-your-site">4. Configuring your Site</h3>
+<p>Open the <em>Gemfile</em> that Jekyll created in VS Code and follow the steps below for a basic configuration:</p>
+
+<ol>
+  <li>Add “#” to the beginning of the line that starts with <code class="language-plaintext highlighter-rouge">gem "jekyll"</code> to comment out this line - or delete it entirely if you’re certain you won’t need it.</li>
+  <li>Delete the “#” from the beginning of <code class="language-plaintext highlighter-rouge"># gem "github-pages"</code> and change this line to <code class="language-plaintext highlighter-rouge">gem "github-pages", "~&gt; VERSION", group: :jekyll_plugins</code>. Replace VERSION with the latest supported version of the <code class="language-plaintext highlighter-rouge">github-pages</code> gem. You can find this version <a href="https://pages.github.com/versions/">here</a>. Save and close the <em>Gemfile</em>.</li>
+  <li>From the terminal, run <code class="language-plaintext highlighter-rouge">bundle install</code>. If this goes well, you’ll see an output in the terminal similar to this:
+    <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Bundle <span class="nb">complete</span><span class="o">!</span> 7 Gemfile dependencies, 101 gems now installed.
+Use <span class="sb">`</span>bundle info <span class="o">[</span>gemname]<span class="sb">`</span> to see where a bundled gem is installed.
+</code></pre></div>    </div>
+  </li>
+</ol>
+
+<p>You can see that several <em>Gemfile</em> dependencies were created, which are locked in by a file called <em>Gemfile.lock</em> that was created at the root of your <em>username.github.io</em> directory. This lock-file gets created when you run <code class="language-plaintext highlighter-rouge">bundle install</code> for the first time. And so, when you have the same repository checked out and you run <code class="language-plaintext highlighter-rouge">bundle install</code> on a different machine, Bundler will find the <code class="language-plaintext highlighter-rouge">Gemfile.lock</code> and skip the dependency resolution step. Instead, it will install all of the same gems that you used on the original machine (<em>i.e.</em> we don’t have to guess which versions of the dependencies we should install).</p>
+
+<p>Now it’s time to test if everything works correctly! Run your Jekyll site locally with:</p>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bundle <span class="nb">exec </span>jekyll serve
+</code></pre></div></div>
+
+<p>This will run your site on http://localhost:4000 by default, but you can change this by adding a different port in <em>your_config.yml</em> file by just adding the following line:</p>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>port: 4001
+</code></pre></div></div>
+
+<h3 id="5-create-a-blog-post">5. Create a Blog Post</h3>
+<p>When you run your site with <code class="language-plaintext highlighter-rouge">bundle exec jekyll serve</code> you’ll see “Posts” on the Home screen. Here, you can also find an example post called “Welcome to Jekyll!”. You can find this post and its details in the <em>_posts</em> directory that Jekyll created for you at the root of your <em>username.github.io</em> directory. Open up the file in VS Code. At the top of the file you’ll find what’s called the <a href="https://jekyllrb.com/docs/front-matter/">front matter</a> of your post:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>---
+layout: post
+title:  "Welcome to Jekyll!"
+date:   2022-03-19 21:49:12 +0100
+categories: jekyll update
+---
+</code></pre></div></div>
+
+<p>You can see that for this post the front matter is used to categorize it into two categories. To understand what’s happening under the hood, we’ll have to take a look at the directory tree for the generated <em>_site</em> folder:</p>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">.</span>
+├── 404.html
+├── about
+│   └── index.html
+├── assets
+│   ├── main.css
+│   └── minima-social-icons.svg
+├── feed.xml
+├── index.html
+└── jekyll
+    └── update
+        └── 2022
+            └── 03
+                └── 19
+                    └── welcome-to-jekyll-copy.html
+</code></pre></div></div>
+
+<p>Categories of a post may be incorporated into <a href="https://jekyllrb.com/docs/permalinks/">the generated URL</a> for the post. So if your front matter has <code class="language-plaintext highlighter-rouge">category: jekyll update</code>, or <code class="language-plaintext highlighter-rouge">categories: jekyll update</code> the post would have the URL as either <code class="language-plaintext highlighter-rouge">../jekyll%20update/2022/03/19/..</code> or <code class="language-plaintext highlighter-rouge">../jekyll/update/2022/03/19/..</code> respectively - as you can see, this is represented in your directory tree. You can read more about Jekyll posts <a href="https://jekyllrb.com/docs/posts/">here</a>.</p>
+
+<p>For your site you can copy this <em>.markdown</em> file and replace it’s content with your own. Make sure to adjust the filename and front matter according to your needs.</p>
+
+<h3 id="6-install-the-jekyll-crosspost-plugin">6. Install the Jekyll Crosspost Plugin</h3>
+<p>In this next step we’ll be installing the <a href="https://github.com/aarongustafson/jekyll-crosspost-to-medium">crosspost plugin</a> that Aaron Gustafson created for Medium. Follow the steps explained in his setup. For a plugin installation guide it’s best to follow <a href="https://jekyllrb.com/docs/plugins/installation/">Jekyll’s installation guide</a>, and add the plugin as a gem to your <em>Gemfile</em>, like so:</p>
+<pre><code class="language-lock"># If you have any plugins, put them here!
+group :jekyll_plugins do
+  gem "jekyll-feed", "~&gt; 0.12"
+  gem "jekyll-crosspost-to-medium"
+end
+</code></pre>
+
+<p>And make sure that you update the <em>Gemfile.lock</em> after by running:</p>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bundle <span class="nb">install</span>
+</code></pre></div></div>
+
+<p>Make sure you add the environment variables from the crosspost guide to your local machine as explained in the installation guide and in the <a href="https://docs.github.com/en/actions/deployment/targeting-different-environments/using-environments-for-deployment#environment-secrets">GitHub environment secrets</a>. Like so: 
+<img src="/assets/images/repo-vars.png" alt="env-vars" /></p>
+
+<h3 id="7-publishing-to-medium">7. Publishing to Medium</h3>
+<p>Now we can add the <code class="language-plaintext highlighter-rouge">$PLACEHOLDER</code> value to <code class="language-plaintext highlighter-rouge">crosspost_to_medium</code> in the front matter of our post so that we can crosspost to Medium:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>---
+layout: post
+title:  "Welcome to Jekyll!"
+date:   2022-03-19 21:49:12 +0100
+categories: jekyll update
+crosspost_to_medium: $PLACEHOLDER
+---
+</code></pre></div></div>
+
+<p>We will set it to a placeholder value, because we don’t want a publishing to be triggered by the <code class="language-plaintext highlighter-rouge">bundle exec jekyll serve</code> command when we are testing the Jekyll site locally. This is going to be handled with <a href="https://github.com/features/actions">GitHub actions</a> after a merged is made to the master. We will do this by adding a Jekyll workflow with specific actions in our repository. Again, the <a href="https://jekyllrb.com/docs/continuous-integration/github-actions/">Jekyll documentation</a> for GitHub actions comes in handy, and we’ll use their <em>.yaml</em> file as a base for:</p>
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">name</span><span class="pi">:</span> <span class="s">Build and deploy Jekyll site to GitHub Pages</span>
+
+<span class="na">on</span><span class="pi">:</span>
+  <span class="na">push</span><span class="pi">:</span>
+    <span class="na">branches</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="s">main</span>
+
+<span class="na">jobs</span><span class="pi">:</span>
+  <span class="na">publish-to-medium</span><span class="pi">:</span>
+    <span class="na">runs-on</span><span class="pi">:</span> <span class="s">ubuntu-latest</span>
+    <span class="na">steps</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="na">uses</span><span class="pi">:</span> <span class="s">actions/checkout@v2</span>
+      <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Set crosspost_to_medium in all .markdown to </span><span class="no">true</span>
+        <span class="na">run</span><span class="pi">:</span> <span class="pi">|</span>
+          <span class="s">sed -i 's/crosspost_to_medium: $PLACEHOLDER/crosspost_to_medium: true/g' _posts/*.markdown</span>
+      <span class="pi">-</span> <span class="na">uses</span><span class="pi">:</span> <span class="s">stefanzweifel/git-auto-commit-action@v4</span>
+        <span class="na">with</span><span class="pi">:</span>
+          <span class="na">commit_message</span><span class="pi">:</span> <span class="s">Apply IS_CROSSPOST to True</span>
+
+  <span class="na">github-pages</span><span class="pi">:</span>
+    <span class="na">needs</span><span class="pi">:</span> <span class="pi">[</span><span class="nv">publish-to-medium</span><span class="pi">]</span>
+    <span class="na">runs-on</span><span class="pi">:</span> <span class="s">ubuntu-latest</span>
+    <span class="na">steps</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="na">uses</span><span class="pi">:</span> <span class="s">actions/checkout@v2</span>
+      <span class="pi">-</span> <span class="na">uses</span><span class="pi">:</span> <span class="s">actions/cache@v2</span>
+        <span class="na">with</span><span class="pi">:</span>
+          <span class="na">path</span><span class="pi">:</span> <span class="s">vendor/bundle</span>
+          <span class="na">key</span><span class="pi">:</span> <span class="s">$-gems-$</span>
+          <span class="na">restore-keys</span><span class="pi">:</span> <span class="pi">|</span>
+            <span class="s">$-gems-</span>
+      <span class="pi">-</span> <span class="na">uses</span><span class="pi">:</span> <span class="s">helaili/jekyll-action@v2</span> <span class="c1"># this handles the build and deploy</span>
+        <span class="na">with</span><span class="pi">:</span>
+          <span class="na">token</span><span class="pi">:</span> <span class="s">$</span>
+        <span class="na">env</span><span class="pi">:</span>
+          <span class="na">MEDIUM_INTEGRATION_TOKEN</span><span class="pi">:</span> <span class="s">$</span>
+          <span class="na">MEDIUM_USER_ID</span><span class="pi">:</span> <span class="s">$</span>
+</code></pre></div></div>
+<p>As shown in the code block above, an extra job replaces the placeholder value in the <em>.markdown</em> files to <code class="language-plaintext highlighter-rouge">crosspost_to_medium: true</code>. We use an action created by <em>stefanzweifel</em> to commit the changes we make to the files. After this initial job the Jekyll site will be built and deployed with the <code class="language-plaintext highlighter-rouge">github-pages</code> job. An extra line (<em>i.e.</em> <code class="language-plaintext highlighter-rouge">env:</code>) is added to set the environment variables that are needed for the crosspost plugin.</p>
+
+<blockquote>
+  <p><em><strong>N.B.</strong> You can just set the front matter variable to <code class="language-plaintext highlighter-rouge">crosspost_to_medium: true</code> and then serve your Jekyll site - so that it will publish your posts to Medium at once. But, making it part of the workflow process will give you more control over when to publish to Medium. You can for example also choose to publish when you create a release.</em></p>
+</blockquote>
+
+<h2 id="conclusion">Conclusion</h2>
+<p>That’s it! You’re all set. Meaning, after a pull request gets merged in your GitHub repository - that holds your Jekyll site, a crosspost to Medium will be triggered by the actions that were added to the GitHub workflow. This post was created using this setup, you can find the source code <a href="https://github.com/selaianwary/selaianwary.github.io">here</a>. I look forward to your feedback!</p>
+
+  </div><a class="u-url" href="/guide/medium/2022/04/04/publish-markdowns-to-medium.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Full-Stack Java Development</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">Full-Stack Java Development</li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p></p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
